@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-09-22T07:36:15.709846+00:00",
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "run_001_sha256": "590b9e700294e5a950c224221070181f9ab1dc193f9a016f8b388a07762a8ced",
+  "run_002_sha256": "590b9e700294e5a950c224221070181f9ab1dc193f9a016f8b388a07762a8ced",
+  "exact_sha256_match": true,
+  "generation_seconds": {
+    "run_001": 83.269369799993,
+    "run_002": 77.06672289999551
+  },
+  "visual_no_text_manual": true,
+  "interpretation": "PASS: два запуска в этой зафиксированной среде совпали побитово; визуальная проверка текста пройдена."
+}

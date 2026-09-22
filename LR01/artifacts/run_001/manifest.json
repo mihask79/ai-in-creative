@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-09-22T07:34:58.266172+00:00",
+  "variant": 3,
+  "model_id": "stabilityai/sd-turbo",
+  "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+  "prompt": "text-free square key visual for a science exhibition, luminous translucent crystal floating above midnight-blue pedestal, orbital light arcs and amber particles, blue and warm amber palette, centered clean composition, generous negative space, full-bleed borderless abstract artwork, no frame, no text or typography, no logo or watermark, no people, not a diagram or documentary evidence",
+  "seed": 30032026,
+  "num_inference_steps": 1,
+  "guidance_scale": 0.0,
+  "height": 512,
+  "width": 512,
+  "run_name": "run_001",
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "torch_num_threads": 1,
+  "deterministic_algorithms": true,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.16",
+  "packages": {
+    "torch": "2.5.1+cpu",
+    "diffusers": "0.40.0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
+    "safetensors": "0.8.0"
+  },
+  "generation_seconds_measured": 83.269369799993,
+  "artifact": "artifacts/run_001/result.png",
+  "artifact_size_bytes": 478039,
+  "image_size_observed": [
+    512,
+    512
+  ],
+  "image_mode_observed": "RGB",
+  "sha256": "590b9e700294e5a950c224221070181f9ab1dc193f9a016f8b388a07762a8ced"
+}

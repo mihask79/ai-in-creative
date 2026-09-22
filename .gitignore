@@ -1,0 +1,40 @@
+# Python и Jupyter
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Веса моделей и кэш инференса
+cache/
+.cache/
+hf_cache/
+models/
+*.safetensors
+*.ckpt
+*.bin
+*.pt
+*.pth
+*.gguf
+
+# Секреты
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+hf_token*
+
+# ОС и редакторы
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Временное
+tmp/
+scratch/
+*.tmp

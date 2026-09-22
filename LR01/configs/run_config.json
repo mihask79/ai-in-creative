@@ -1,0 +1,13 @@
+{
+  "variant": 3,
+  "variant_context": "концепт постера научной выставки",
+  "variant_factor": "ограничение no text и чистая композиция",
+  "model_id": "stabilityai/sd-turbo",
+  "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+  "prompt": "text-free square key visual for a science exhibition, luminous translucent crystal floating above midnight-blue pedestal, orbital light arcs and amber particles, blue and warm amber palette, centered clean composition, generous negative space, full-bleed borderless abstract artwork, no frame, no text or typography, no logo or watermark, no people, not a diagram or documentary evidence",
+  "seed": 30032026,
+  "num_inference_steps": 1,
+  "guidance_scale": 0.0,
+  "height": 512,
+  "width": 512
+}
