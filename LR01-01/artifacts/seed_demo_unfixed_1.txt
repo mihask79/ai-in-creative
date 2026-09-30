@@ -1,0 +1,3 @@
+C:\DONSTU\ai-in-creative-industries\LR01\reproducibility\src\seed_demo.py:16: RuntimeWarning: --seed omitted; using time-derived seed 2885143056
+  warnings.warn(f"--seed omitted; using time-derived seed {seed}", RuntimeWarning)
+seed=2885143056 sha256=a8b8496454d90d86b82b0bd332cc86e1b30701aeaf95946b05bc1fccf7b2f0e6

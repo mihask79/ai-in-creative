@@ -1,0 +1,91 @@
+{
+  "variant": 7,
+  "context": "paper texture",
+  "factor": "image size x1.5, 96 to 144",
+  "threshold": 2.0,
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "parameters": {
+    "baseline": {
+      "size": 96,
+      "octaves": 3,
+      "persistence": 0.6,
+      "bits": 8,
+      "interpolation": "smooth",
+      "cell": 4
+    },
+    "factor": {
+      "size": 144,
+      "octaves": 3,
+      "persistence": 0.6,
+      "bits": 8,
+      "interpolation": "smooth",
+      "cell": 4
+    }
+  },
+  "reproducibility": {
+    "EQ_1_2": true,
+    "EQ_1_4": true,
+    "EQ_1_3": false,
+    "EQ_2_4": true
+  },
+  "pixel_sha256_prefix16": [
+    "29c6a6345d470f42cc8068deaf9530132cc70838f4bbfccc3bb1dc2f3d236c74",
+    "29c6a6345d470f42cc8068deaf9530132cc70838f4bbfccc3bb1dc2f3d236c74",
+    "a759a35c787023a1655e34dcb8a755a457377efa50cddaa936aaf0590e85c8c0",
+    "29c6a6345d470f42cc8068deaf9530132cc70838f4bbfccc3bb1dc2f3d236c74"
+  ],
+  "png_sha256": {
+    "baseline_seed101.png": "9081bc43e0b6f01e66b79ae5584a114a16649194fbd34a7a7d9da059b78e15e6",
+    "factor_seed101.png": "888cdfad900a155cf358f3185dbc85892b8c6cd2a95ec89780503caf85b74afb"
+  },
+  "metrics": {
+    "mean": {
+      "baseline_mean": 0.5036409824346405,
+      "baseline_sample_sd": 0.007827758212578959,
+      "factor_mean": 0.5012231829460179,
+      "delta": -0.0024177994886226406,
+      "abs_delta_over_baseline_sd": 0.3088750856838314,
+      "substantial_at_threshold_2": false,
+      "factor_sample_sd": 0.006131690017657761
+    },
+    "contrast": {
+      "baseline_mean": 0.1392675894139735,
+      "baseline_sample_sd": 0.002117107565122848,
+      "factor_mean": 0.13897086646762682,
+      "delta": -0.00029672294634666696,
+      "abs_delta_over_baseline_sd": 0.14015487509225788,
+      "substantial_at_threshold_2": false,
+      "factor_sample_sd": 0.001287067297211312
+    },
+    "edge_energy": {
+      "baseline_mean": 0.08347626418988649,
+      "baseline_sample_sd": 0.0006433767112322479,
+      "factor_mean": 0.08357466063348416,
+      "delta": 9.839644359767308e-05,
+      "abs_delta_over_baseline_sd": 0.15293752770319605,
+      "substantial_at_threshold_2": false,
+      "factor_sample_sd": 0.00030887474473479824
+    },
+    "entropy_bits": {
+      "baseline_mean": 7.174098260854794,
+      "baseline_sample_sd": 0.018269871469326664,
+      "factor_mean": 7.179722901789724,
+      "delta": 0.005624640934930092,
+      "abs_delta_over_baseline_sd": 0.3078642859843495,
+      "substantial_at_threshold_2": false,
+      "factor_sample_sd": 0.012736388578781803
+    }
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "zlib": "1.3.2"
+  }
+}
