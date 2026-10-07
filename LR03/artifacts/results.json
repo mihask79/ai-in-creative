@@ -1,0 +1,144 @@
+{
+  "lab": "LR03",
+  "variant": 7,
+  "scene": {
+    "name": "low contrast",
+    "lo": 0.4,
+    "hi": 0.6,
+    "noise_std": 0.02,
+    "shape_rgb": [
+      128,
+      128,
+      3
+    ],
+    "dtype": "float64",
+    "observed_min_seed_101": 0.4,
+    "observed_max_seed_101": 0.5871538729348539
+  },
+  "operation": {
+    "name": "4-bit luminance quantization",
+    "levels": 16
+  },
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "histogram_bins": 32,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pillow": "12.3.0"
+  },
+  "method": "Standalone Python equivalent. Scene geometry is authored in this project because lab03_lib.jl was not supplied.",
+  "luma_max_abs_difference": 1.1102230246251565e-16,
+  "seed_101_luma_sha256": "33e5829b64f98d42fee3aaf6f67b1bad92302d2a27f443218547ceb96a39b37b",
+  "seed_101_checksum_reproduced": true,
+  "metrics": {
+    "mean": {
+      "baseline_mean": 0.46892881744273646,
+      "baseline_sd": 8.342998056306913e-05,
+      "after_mean": 0.46899169921875006,
+      "after_sd": 0.00013616297549007086,
+      "delta": 6.288177601360134e-05,
+      "relative_change": 0.00013409663401904318,
+      "statistical_ratio_abs_delta_over_baseline_sd": 0.7537071876226279,
+      "statistically_significant_by_course_rule": false,
+      "practically_significant_by_5_percent_rule": false
+    },
+    "contrast_std": {
+      "baseline_mean": 0.030281119372712835,
+      "baseline_sd": 0.00013982708568945954,
+      "after_mean": 0.03510855205239531,
+      "after_sd": 0.0002602466312021968,
+      "delta": 0.0048274326796824765,
+      "relative_change": 0.1594205491634702,
+      "statistical_ratio_abs_delta_over_baseline_sd": 34.52430304099786,
+      "statistically_significant_by_course_rule": true,
+      "practically_significant_by_5_percent_rule": true
+    },
+    "entropy_bits": {
+      "baseline_mean": 2.066421900399806,
+      "baseline_sd": 0.008427761995153257,
+      "after_mean": 1.1303371572473995,
+      "after_sd": 0.009937950415176408,
+      "delta": -0.9360847431524064,
+      "relative_change": 0.45299788149326875,
+      "statistical_ratio_abs_delta_over_baseline_sd": 111.07156842952396,
+      "statistically_significant_by_course_rule": true,
+      "practically_significant_by_5_percent_rule": true
+    }
+  },
+  "mean_psnr_db": 34.38956751942722,
+  "psnr_practical_limit_db": 30.0,
+  "psnr_practically_significant": false,
+  "raw_results": [
+    {
+      "seed": 101,
+      "base_mean": 0.46894486697748905,
+      "after_mean": 0.4691406250000001,
+      "delta_mean": 0.0001957580225110389,
+      "base_contrast_std": 0.030280974375568037,
+      "after_contrast_std": 0.035369603292568316,
+      "delta_contrast_std": 0.005088628917000279,
+      "base_entropy_bits": 2.066081895490848,
+      "after_entropy_bits": 1.1402857489833362,
+      "delta_entropy_bits": -0.925796146507512,
+      "psnr_db": 34.34650775605367
+    },
+    {
+      "seed": 102,
+      "base_mean": 0.4688584045542165,
+      "after_mean": 0.46894531250000004,
+      "delta_mean": 8.6907945783532e-05,
+      "base_contrast_std": 0.030401021213872823,
+      "after_contrast_std": 0.03533669098410697,
+      "delta_contrast_std": 0.004935669770234151,
+      "base_entropy_bits": 2.0757354023108507,
+      "after_entropy_bits": 1.1390142774913796,
+      "delta_entropy_bits": -0.9367211248194711,
+      "psnr_db": 34.36677006036325
+    },
+    {
+      "seed": 103,
+      "base_mean": 0.46898486055277167,
+      "after_mean": 0.46888427734375004,
+      "delta_mean": -0.00010058320902162077,
+      "base_contrast_std": 0.030043092111844524,
+      "after_contrast_std": 0.034849721928114884,
+      "delta_contrast_std": 0.00480662981627036,
+      "base_entropy_bits": 2.054671549659056,
+      "after_entropy_bits": 1.1203713549153953,
+      "delta_entropy_bits": -0.9343001947436607,
+      "psnr_db": 34.40806292856618
+    },
+    {
+      "seed": 104,
+      "base_mean": 0.4688292748715831,
+      "after_mean": 0.46885579427083335,
+      "delta_mean": 2.65193992502466e-05,
+      "base_contrast_std": 0.030330792542138055,
+      "after_contrast_std": 0.03482426820686105,
+      "delta_contrast_std": 0.004493475664722992,
+      "base_entropy_bits": 2.062550785134643,
+      "after_entropy_bits": 1.119527607263034,
+      "delta_entropy_bits": -0.9430231778716089,
+      "psnr_db": 34.43292210607795
+    },
+    {
+      "seed": 105,
+      "base_mean": 0.4690266802576218,
+      "after_mean": 0.46913248697916676,
+      "delta_mean": 0.0001058067215449765,
+      "base_contrast_std": 0.03034971662014074,
+      "after_contrast_std": 0.035162475850325316,
+      "delta_contrast_std": 0.004812759230184576,
+      "base_entropy_bits": 2.0730698694036316,
+      "after_entropy_bits": 1.1324867975838524,
+      "delta_entropy_bits": -0.9405830718197792,
+      "psnr_db": 34.39357474607502
+    }
+  ]
+}
