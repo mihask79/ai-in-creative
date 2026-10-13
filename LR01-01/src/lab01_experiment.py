@@ -41,18 +41,18 @@ def metrics(pixels: bytes, size: int) -> dict[str, float]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--variant", type=int, default=7)
+    parser.add_argument("--variant", type=int, default=1)
     parser.add_argument("--out", type=Path, default=Path("artifacts"))
     args = parser.parse_args()
-    if args.variant != 7:
-        parser.error("this delivered run is configured for variant 7")
+    if args.variant != 1:
+        parser.error("this delivered run is configured for variant 1")
     args.out.mkdir(parents=True, exist_ok=True)
 
-    # Variant 7: paper texture; factor: image size x1.5, 96 -> 144.
-    common = {"size": 96, "octaves": 3, "persistence": 0.60, "bits": 8,
+    # Variant 1: cloudy sky; factor: image size x1.5, 96 -> 144.
+    common = {"size": 96, "octaves": 4, "persistence": 0.50, "bits": 8,
               "interpolation": "smooth"}
-    baseline = {**common, "cell": 4}
-    changed = {**common, "size": 144, "cell": 4}
+    baseline = {**common, "cell": 32}
+    changed = {**common, "size": 144, "cell": 32}
 
     check_seeds = [101, 101, 1101, 101]
     check_arrays = [generate(**baseline, seed=s) for s in check_seeds]
@@ -89,7 +89,7 @@ def main() -> None:
                         "substantial_at_threshold_2": ratio > 2.0,
                         "factor_sample_sd": statistics.stdev(samples["factor"][key])}
 
-    report = {"variant": 7, "context": "paper texture", "factor": "image size x1.5, 96 to 144",
+    report = {"variant": 1, "context": "cloudy sky (poster background)", "factor": "image size x1.5, 96 to 144",
               "threshold": 2.0, "seeds": seeds, "parameters": {"baseline": baseline, "factor": changed},
               "reproducibility": reproducibility,
               "pixel_sha256_prefix16": digests,

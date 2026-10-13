@@ -1,10 +1,10 @@
 {
-  "variant": 7,
-  "scenario": "монетизируемые обложки подкастов; публикация в сети",
+  "variant": 1,
+  "scenario": "афиша фестиваля; печать, продажа билетов и публикация",
   "commercial_use": true,
   "publish_or_share_dataset": true,
   "create_derivatives": true,
-  "allow_sharealike_derivatives": true,
+  "allow_sharealike_derivatives": false,
   "personal_data_allowed": false,
   "note": "Учебная политика. Используются только синтетические записи; автоматическая проверка не является юридическим заключением."
 }

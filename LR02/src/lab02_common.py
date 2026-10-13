@@ -1,4 +1,4 @@
-"""Shared helpers for the reproducible variant 7 laboratory workflow."""
+"""Shared helpers for the reproducible variant 1 laboratory workflow."""
 from __future__ import annotations
 import csv, json
 from pathlib import Path

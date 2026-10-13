@@ -1,7 +1,7 @@
-"""Python implementation of laboratory work 3, variant 7.
+"""Python implementation of laboratory work 3, variant 1.
 
 The course library lab03_lib.jl was not present in the project, so the scene
-generator below follows the written low-contrast parameters and is documented
+generator below follows the written base-scene parameters and is documented
 as an equivalent implementation, not a byte-for-byte Engee reproduction.
 """
 from __future__ import annotations
@@ -20,7 +20,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DEFAULT = ROOT / "artifacts"
 SIZE = 128
-LO, HI, NOISE_STD = 0.40, 0.60, 0.02
+LO, HI, NOISE_STD = 0.15, 0.85, 0.02
 SEEDS = list(range(101, 106))
 BINS = 32
 PRACTICAL_RELATIVE_LIMIT = 0.05
@@ -28,7 +28,7 @@ PRACTICAL_PSNR_LIMIT_DB = 30.0
 
 
 def make_scene(seed: int) -> np.ndarray:
-    """Return a 128x128 RGB Float64 low-contrast synthetic scene.
+    """Return a 128x128 RGB Float64 base-scene synthetic scene.
 
     A stable smooth field and simple geometric forms provide scene structure;
     the seed changes only the additive Gaussian noise.
@@ -36,15 +36,13 @@ def make_scene(seed: int) -> np.ndarray:
     y, x = np.mgrid[0:SIZE, 0:SIZE].astype(np.float64)
     x /= SIZE - 1
     y /= SIZE - 1
-    field = 0.47 + 0.045 * (x - 0.5) + 0.035 * (0.5 - y)
+    field = LO + (HI - LO) * (0.7 * x + 0.3 * y)
     disk = ((x - 0.34) ** 2 + (y - 0.38) ** 2) < 0.13 ** 2
-    bar = (x > 0.58) & (x < 0.79) & (y > 0.28) & (y < 0.72)
-    field[disk] += 0.055
-    field[bar] -= 0.045
+    field[disk] += 0.15
     rng = np.random.default_rng(seed)
     gray = np.clip(field + rng.normal(0.0, NOISE_STD, (SIZE, SIZE)), LO, HI)
     # Small channel offsets make the source a color image while preserving its
-    # low-contrast range. The offsets are fixed; only the noise depends on seed.
+    # base-scene range. The offsets are fixed; only the noise depends on seed.
     rgb = np.stack((gray + 0.002, gray, gray - 0.002), axis=-1)
     return np.clip(rgb, LO, HI).astype(np.float64)
 
@@ -102,7 +100,7 @@ def save_histogram(before: np.ndarray, after: np.ndarray, path: Path) -> None:
     im = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(im)
     f = font(18)
-    d.text((28, 18), "Variant 7: brightness histograms (32 bins)", fill="#172033", font=font(24))
+    d.text((28, 18), "Variant 1: brightness histograms (32 bins)", fill="#172033", font=font(24))
     for panel, (arr, title, color) in enumerate(((before, "Before", "#4976c8"), (after, "After 4-bit quantization", "#d57935"))):
         top = 78 + panel * 238
         left, right, bottom = 92, 952, top + 176
@@ -207,8 +205,8 @@ def run(out: Path) -> dict:
         writer.writeheader()
         writer.writerows(rows)
     result = {
-        "lab": "LR03", "variant": 7,
-        "scene": {"name": "low contrast", "lo": LO, "hi": HI, "noise_std": NOISE_STD,
+        "lab": "LR03", "variant": 1,
+        "scene": {"name": "base scene: gradient and circle", "lo": LO, "hi": HI, "noise_std": NOISE_STD,
                   "shape_rgb": [SIZE, SIZE, 3], "dtype": "float64"},
         "operation": {"name": "4-bit luminance quantization", "levels": 16},
         "seeds": SEEDS, "histogram_bins": BINS,
@@ -229,7 +227,7 @@ def run(out: Path) -> dict:
     (out / "results.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     passport = {
         "laboratory": "ЛР03",
-        "variant": 7,
+        "variant": 1,
         "date": __import__("datetime").date.today().isoformat(),
         "environment": result["environment"],
         "language_implementation": "Python",

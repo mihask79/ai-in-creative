@@ -25,15 +25,15 @@ def findings(rows, policy):
 def main():
     p=argparse.ArgumentParser(); p.add_argument('--manifest',required=True); p.add_argument('--policy',required=True); p.add_argument('--out',required=True); a=p.parse_args()
     rows=read_csv(a.manifest); pol=read_json(a.policy); result=findings(rows,pol); out=Path(a.out); out.mkdir(parents=True,exist_ok=True)
-    decisions={'item01':'Исключить или запросить отдельное коммерческое разрешение: NC конфликтует с монетизацией; SA можно соблюдать.',
-      'item04':'Исключить или запросить отдельное коммерческое разрешение: NC конфликтует с монетизацией; SA можно соблюдать.',
+    decisions={'item01':'Исключить или запросить отдельное коммерческое разрешение: NC конфликтует с коммерческой афишей; SA также запрещён политикой. Отдельное разрешение должно снимать оба ограничения.',
+      'item04':'Исключить или запросить отдельное коммерческое разрешение: NC конфликтует с коммерческой афишей; SA также запрещён политикой. Отдельное разрешение должно снимать оба ограничения.',
       'item08':'Исключить или получить коммерческое разрешение до использования.',
       'item10':'Исключить или получить коммерческое разрешение до использования.',
       'item09':'Карантин до подтверждения даты получения и источника; не восстанавливать дату догадкой.'}
     for f in result: f['decision']=decisions.get(f['item_id'],'Уточнить у поставщика; до проверки не использовать.')
     write_csv(out/'audit_findings.csv',['rule','level','item_id','description','decision'],result)
     errors=sum(x['level']=='error' for x in result); warnings=sum(x['level']=='warning' for x in result)
-    lines=['АУДИТ ЛР 2 · ВАРИАНТ 7','',f"Сценарий: {pol['scenario']}",f'Объектов: {len(rows)}',f'Ошибок: {errors}; предупреждений: {warnings}','', 'Решения по объектам:']
+    lines=['АУДИТ ЛР 2 · ВАРИАНТ 1','',f"Сценарий: {pol['scenario']}",f'Объектов: {len(rows)}',f'Ошибок: {errors}; предупреждений: {warnings}','', 'Решения по объектам:']
     for item,decision in decisions.items(): lines.append(f'- {item}: {decision}')
     lines += ['', 'Итог: исключить четыре NC-объекта или получить отдельные разрешения. item09 не использовать до подтверждения происхождения.',
       'Ограничение: автоматическая проверка оценивает только поля манифеста и не подтверждает лицензию у первоисточника; не является юридической консультацией.']

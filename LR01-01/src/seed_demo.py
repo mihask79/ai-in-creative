@@ -16,5 +16,5 @@ if args.seed is None:
     warnings.warn(f"--seed omitted; using time-derived seed {seed}", RuntimeWarning)
 else:
     seed = args.seed
-pixels = generate(size=96, cell=4, octaves=3, persistence=0.60, seed=seed)
+pixels = generate(size=96, cell=32, octaves=4, persistence=0.50, seed=seed)
 print(f"seed={seed} sha256={hashlib.sha256(pixels).hexdigest()}")

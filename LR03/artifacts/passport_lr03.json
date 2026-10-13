@@ -1,7 +1,7 @@
 {
   "laboratory": "ЛР03",
-  "variant": 7,
-  "date": "2026-10-07",
+  "variant": 1,
+  "date": "2026-10-13",
   "environment": {
     "python": "3.12.14",
     "numpy": "2.3.5",
@@ -9,9 +9,9 @@
   },
   "language_implementation": "Python",
   "scene": {
-    "name": "low contrast",
-    "lo": 0.4,
-    "hi": 0.6,
+    "name": "base scene: gradient and circle",
+    "lo": 0.15,
+    "hi": 0.85,
     "noise_std": 0.02,
     "shape_rgb": [
       128,
@@ -19,8 +19,8 @@
       3
     ],
     "dtype": "float64",
-    "observed_min_seed_101": 0.4,
-    "observed_max_seed_101": 0.5871538729348539
+    "observed_min_seed_101": 0.15,
+    "observed_max_seed_101": 0.85
   },
   "seeds": [
     101,
@@ -38,6 +38,6 @@
     "relative_metric_change_over": 0.05,
     "psnr_below_db": 30.0
   },
-  "sha256_luminance_seed_101": "33e5829b64f98d42fee3aaf6f67b1bad92302d2a27f443218547ceb96a39b37b",
+  "sha256_luminance_seed_101": "0cd4fd52dab3651f772143883f7cda9e281513c72aa305a6c6af4399f49afbdc",
   "checksum_reproduced": true
 }

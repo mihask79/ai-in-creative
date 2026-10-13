@@ -20,6 +20,8 @@ def main():
     groups={r.get('category') for r in rows};
     if len(rows)<5: errors.append(f'рисков {len(rows)}, требуется не менее 5')
     if len(groups)<4: errors.append(f'разных категорий {len(groups)}, требуется не менее 4')
+    for required in ('Intellectual Property', 'Information Integrity'):
+        if required not in groups: errors.append(f'Для варианта 1 обязательна категория {required}')
     ranked=[]
     for r in rows:
         try: score=int(r['likelihood'])*int(r['impact'])
@@ -27,7 +29,7 @@ def main():
         ranked.append((score,r))
     ranked.sort(key=lambda x:x[0],reverse=True)
     out=Path(a.out); out.parent.mkdir(parents=True,exist_ok=True)
-    report=['РАНЖИРОВАНИЕ РИСКОВ · ВАРИАНТ 7','']+[f"{score}: {r.get('risk_id')} · {r.get('category')} · {r.get('description')}" for score,r in ranked]
+    report=['РАНЖИРОВАНИЕ РИСКОВ · ВАРИАНТ 1','']+[f"{score}: {r.get('risk_id')} · {r.get('category')} · {r.get('description')}" for score,r in ranked]
     report+=['',f'RESULT: {"FAIL ("+str(len(errors))+")" if errors else "PASS"}']+([f'FAIL: {e}' for e in errors] if errors else [])
     out.write_text('\n'.join(report)+'\n',encoding='utf-8'); print(report[-1])
     if errors: raise SystemExit(1)
