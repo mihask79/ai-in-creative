@@ -1,0 +1,10 @@
+# CPU run: install torch from https://download.pytorch.org/whl/cpu first.
+torch==2.11.0
+numpy==2.4.6
+Pillow==12.3.0
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.4.0
+jupyter_client==8.10.0
+# Only for rebuilding the PDF report:
+reportlab>=4,<5

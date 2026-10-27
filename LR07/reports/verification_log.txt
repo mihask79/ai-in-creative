@@ -1,0 +1,13 @@
+PASS: A 101 PSNR, gap, parameters, timestamps, checkpoint
+PASS: B 101 PSNR, gap, parameters, timestamps, checkpoint
+PASS: A 102 PSNR, gap, parameters, timestamps, checkpoint
+PASS: B 102 PSNR, gap, parameters, timestamps, checkpoint
+PASS: A 103 PSNR, gap, parameters, timestamps, checkpoint
+PASS: B 103 PSNR, gap, parameters, timestamps, checkpoint
+PASS: A 104 PSNR, gap, parameters, timestamps, checkpoint
+PASS: B 104 PSNR, gap, parameters, timestamps, checkpoint
+PASS: A 105 PSNR, gap, parameters, timestamps, checkpoint
+PASS: B 105 PSNR, gap, parameters, timestamps, checkpoint
+PASS: comparison.png exactly matches originals and saved A/B models for seed 101
+PASS: full training notebook executed; outputs, image and diagnostic summaries are present
+RESULT: PASS

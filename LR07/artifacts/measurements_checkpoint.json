@@ -1,0 +1,122 @@
+[
+  {
+    "mode": "A",
+    "seed": 101,
+    "d": 8,
+    "started_at": "2026-10-27T16:39:32+03:00",
+    "completed_at": "2026-10-27T16:39:56+03:00",
+    "checkpoint": "artifacts/A_101_weights.npz",
+    "psnr": 25.849468231201172,
+    "gap": 0.04010581970214844,
+    "params": 101.035,
+    "seconds": 23.497814300004393
+  },
+  {
+    "mode": "B",
+    "seed": 101,
+    "d": 2,
+    "started_at": "2026-10-27T16:39:56+03:00",
+    "completed_at": "2026-10-27T16:40:22+03:00",
+    "checkpoint": "artifacts/B_101_weights.npz",
+    "psnr": 23.30545425415039,
+    "gap": 0.09428024291992188,
+    "params": 88.741,
+    "seconds": 24.745293699990725
+  },
+  {
+    "mode": "A",
+    "seed": 102,
+    "d": 8,
+    "started_at": "2026-10-27T16:40:22+03:00",
+    "completed_at": "2026-10-27T16:40:48+03:00",
+    "checkpoint": "artifacts/A_102_weights.npz",
+    "psnr": 26.226293563842773,
+    "gap": 0.04674339294433594,
+    "params": 101.035,
+    "seconds": 26.401378299982753
+  },
+  {
+    "mode": "B",
+    "seed": 102,
+    "d": 2,
+    "started_at": "2026-10-27T16:40:48+03:00",
+    "completed_at": "2026-10-27T16:41:13+03:00",
+    "checkpoint": "artifacts/B_102_weights.npz",
+    "psnr": 23.423460006713867,
+    "gap": 0.0827178955078125,
+    "params": 88.741,
+    "seconds": 24.701922599982936
+  },
+  {
+    "mode": "A",
+    "seed": 103,
+    "d": 8,
+    "started_at": "2026-10-27T16:41:13+03:00",
+    "completed_at": "2026-10-27T16:41:38+03:00",
+    "checkpoint": "artifacts/A_103_weights.npz",
+    "psnr": 24.766117095947266,
+    "gap": 0.019739151000976562,
+    "params": 101.035,
+    "seconds": 24.390208099997835
+  },
+  {
+    "mode": "B",
+    "seed": 103,
+    "d": 2,
+    "started_at": "2026-10-27T16:41:38+03:00",
+    "completed_at": "2026-10-27T16:42:03+03:00",
+    "checkpoint": "artifacts/B_103_weights.npz",
+    "psnr": 22.6579647064209,
+    "gap": 0.08437919616699219,
+    "params": 88.741,
+    "seconds": 24.094076300010784
+  },
+  {
+    "mode": "A",
+    "seed": 104,
+    "d": 8,
+    "started_at": "2026-10-27T16:42:03+03:00",
+    "completed_at": "2026-10-27T16:42:28+03:00",
+    "checkpoint": "artifacts/A_104_weights.npz",
+    "psnr": 25.087158203125,
+    "gap": 0.05112648010253906,
+    "params": 101.035,
+    "seconds": 25.102445500000613
+  },
+  {
+    "mode": "B",
+    "seed": 104,
+    "d": 2,
+    "started_at": "2026-10-27T16:42:28+03:00",
+    "completed_at": "2026-10-27T16:42:54+03:00",
+    "checkpoint": "artifacts/B_104_weights.npz",
+    "psnr": 23.003387451171875,
+    "gap": 0.07706832885742188,
+    "params": 88.741,
+    "seconds": 25.907434299995657
+  },
+  {
+    "mode": "A",
+    "seed": 105,
+    "d": 8,
+    "started_at": "2026-10-27T16:42:54+03:00",
+    "completed_at": "2026-10-27T16:43:18+03:00",
+    "checkpoint": "artifacts/A_105_weights.npz",
+    "psnr": 26.864559173583984,
+    "gap": 0.04383087158203125,
+    "params": 101.035,
+    "seconds": 23.41214410000248
+  },
+  {
+    "mode": "B",
+    "seed": 105,
+    "d": 2,
+    "started_at": "2026-10-27T16:43:18+03:00",
+    "completed_at": "2026-10-27T16:43:43+03:00",
+    "checkpoint": "artifacts/B_105_weights.npz",
+    "psnr": 23.47691535949707,
+    "gap": 0.12624740600585938,
+    "params": 88.741,
+    "seconds": 24.286066700005904
+  }
+]

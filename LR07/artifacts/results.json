@@ -1,0 +1,340 @@
+{
+  "variant": 1,
+  "completed_at": "2026-10-27T16:47:24+03:00",
+  "preregistration": {
+    "recorded_at": "2026-10-27T16:39:08+03:00",
+    "variant": 1,
+    "kind": "disc",
+    "factor": "latent_8_to_2",
+    "hypothesis": "Сжатие латентного вектора с 8 до 2 чисел снизит PSNR на тесте более чем на 1 дБ. Изменение разрыва train-test останется в пределах 0,1 дБ; изменение времени - в пределах 20%. Основная предполагаемая причина потери качества - недостаточное узкое место для трёх факторов сцены.",
+    "A": {
+      "arch": "conv",
+      "d": 8,
+      "loss": "mse",
+      "noise": 0.0,
+      "eval_noise": 0.0,
+      "n_train": 4096,
+      "epochs": 20
+    },
+    "B": {
+      "arch": "conv",
+      "d": 2,
+      "loss": "mse",
+      "noise": 0.0,
+      "eval_noise": 0.0,
+      "n_train": 4096,
+      "epochs": 20
+    },
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "data_seed": 7,
+    "tolerances": {
+      "psnr": 1.0,
+      "gap": 0.1,
+      "seconds_relative": 0.2
+    },
+    "tolerance_rationale": {
+      "psnr": "Изменение MSE примерно в 1,26 раза считаем практически заметным.",
+      "gap": "Сдвиг разрыва менее 0,1 дБ считаем малым.",
+      "seconds": "Меньше 20% времени не считаем существенным."
+    },
+    "diagnostic_d": [
+      1,
+      2,
+      3,
+      4,
+      8
+    ],
+    "diagnostic_seeds": [
+      101,
+      102,
+      103
+    ],
+    "params_rule": "Точное изменение ёмкости; практический допуск не задаётся.",
+    "environment_adaptation": "Локальный Windows, CPU float32, 4 потока; Colab T4 не используется. Данные, архитектура, шаг Adam, batch и 20 эпох сохранены."
+  },
+  "environment": {
+    "recorded_at": "2026-10-27T16:39:08+03:00",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.17 (main, Oct  3 2026, 01:03:09) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\DONSTU\\ai-in-creative-industries\\LR05\\.venv\\Scripts\\python.exe",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "deterministic_algorithms": true,
+    "packages": {
+      "torch": "2.11.0+cpu",
+      "numpy": "2.4.6",
+      "Pillow": "12.3.0",
+      "nbformat": "5.11.1",
+      "nbclient": "0.11.0"
+    },
+    "library_sha256": "3455ac72c7d5a0a119784faefd6c248f8c81975f99beba1dd26dca1052a89a03"
+  },
+  "dataset": {
+    "train": 4096,
+    "test": 1024,
+    "shape": [
+      3,
+      32,
+      32
+    ],
+    "seed": 7,
+    "sha256": "122f2ccf788c451f345b9591e5e44372aa26608835c4ddafbbc81629742ba9f3"
+  },
+  "baseline_psnr": 17.170730590820312,
+  "measurements": [
+    {
+      "mode": "A",
+      "seed": 101,
+      "d": 8,
+      "started_at": "2026-10-27T16:39:32+03:00",
+      "completed_at": "2026-10-27T16:39:56+03:00",
+      "checkpoint": "artifacts/A_101_weights.npz",
+      "psnr": 25.849468231201172,
+      "gap": 0.04010581970214844,
+      "params": 101.035,
+      "seconds": 23.497814300004393
+    },
+    {
+      "mode": "B",
+      "seed": 101,
+      "d": 2,
+      "started_at": "2026-10-27T16:39:56+03:00",
+      "completed_at": "2026-10-27T16:40:22+03:00",
+      "checkpoint": "artifacts/B_101_weights.npz",
+      "psnr": 23.30545425415039,
+      "gap": 0.09428024291992188,
+      "params": 88.741,
+      "seconds": 24.745293699990725
+    },
+    {
+      "mode": "A",
+      "seed": 102,
+      "d": 8,
+      "started_at": "2026-10-27T16:40:22+03:00",
+      "completed_at": "2026-10-27T16:40:48+03:00",
+      "checkpoint": "artifacts/A_102_weights.npz",
+      "psnr": 26.226293563842773,
+      "gap": 0.04674339294433594,
+      "params": 101.035,
+      "seconds": 26.401378299982753
+    },
+    {
+      "mode": "B",
+      "seed": 102,
+      "d": 2,
+      "started_at": "2026-10-27T16:40:48+03:00",
+      "completed_at": "2026-10-27T16:41:13+03:00",
+      "checkpoint": "artifacts/B_102_weights.npz",
+      "psnr": 23.423460006713867,
+      "gap": 0.0827178955078125,
+      "params": 88.741,
+      "seconds": 24.701922599982936
+    },
+    {
+      "mode": "A",
+      "seed": 103,
+      "d": 8,
+      "started_at": "2026-10-27T16:41:13+03:00",
+      "completed_at": "2026-10-27T16:41:38+03:00",
+      "checkpoint": "artifacts/A_103_weights.npz",
+      "psnr": 24.766117095947266,
+      "gap": 0.019739151000976562,
+      "params": 101.035,
+      "seconds": 24.390208099997835
+    },
+    {
+      "mode": "B",
+      "seed": 103,
+      "d": 2,
+      "started_at": "2026-10-27T16:41:38+03:00",
+      "completed_at": "2026-10-27T16:42:03+03:00",
+      "checkpoint": "artifacts/B_103_weights.npz",
+      "psnr": 22.6579647064209,
+      "gap": 0.08437919616699219,
+      "params": 88.741,
+      "seconds": 24.094076300010784
+    },
+    {
+      "mode": "A",
+      "seed": 104,
+      "d": 8,
+      "started_at": "2026-10-27T16:42:03+03:00",
+      "completed_at": "2026-10-27T16:42:28+03:00",
+      "checkpoint": "artifacts/A_104_weights.npz",
+      "psnr": 25.087158203125,
+      "gap": 0.05112648010253906,
+      "params": 101.035,
+      "seconds": 25.102445500000613
+    },
+    {
+      "mode": "B",
+      "seed": 104,
+      "d": 2,
+      "started_at": "2026-10-27T16:42:28+03:00",
+      "completed_at": "2026-10-27T16:42:54+03:00",
+      "checkpoint": "artifacts/B_104_weights.npz",
+      "psnr": 23.003387451171875,
+      "gap": 0.07706832885742188,
+      "params": 88.741,
+      "seconds": 25.907434299995657
+    },
+    {
+      "mode": "A",
+      "seed": 105,
+      "d": 8,
+      "started_at": "2026-10-27T16:42:54+03:00",
+      "completed_at": "2026-10-27T16:43:18+03:00",
+      "checkpoint": "artifacts/A_105_weights.npz",
+      "psnr": 26.864559173583984,
+      "gap": 0.04383087158203125,
+      "params": 101.035,
+      "seconds": 23.41214410000248
+    },
+    {
+      "mode": "B",
+      "seed": 105,
+      "d": 2,
+      "started_at": "2026-10-27T16:43:18+03:00",
+      "completed_at": "2026-10-27T16:43:43+03:00",
+      "checkpoint": "artifacts/B_105_weights.npz",
+      "psnr": 23.47691535949707,
+      "gap": 0.12624740600585938,
+      "params": 88.741,
+      "seconds": 24.286066700005904
+    }
+  ],
+  "summary": [
+    {
+      "metric": "psnr",
+      "A": 25.75871925354004,
+      "s": 0.8494110208045333,
+      "B": 23.17343635559082,
+      "delta": -2.58528289794922,
+      "ratio": 3.043618265631317,
+      "criterion_2s": true,
+      "threshold": 1.0,
+      "outside_tolerance": true,
+      "classification": "ухудшение"
+    },
+    {
+      "metric": "gap",
+      "A": 0.04030914306640625,
+      "s": 0.012185881561719165,
+      "B": 0.09293861389160156,
+      "delta": 0.05262947082519531,
+      "ratio": 4.318889081486398,
+      "criterion_2s": true,
+      "threshold": 0.1,
+      "outside_tolerance": false,
+      "classification": "нейтрально"
+    },
+    {
+      "metric": "params",
+      "A": 101.035,
+      "s": 0.0,
+      "B": 88.741,
+      "delta": -12.293999999999997,
+      "ratio": null,
+      "criterion_2s": true,
+      "threshold": null,
+      "outside_tolerance": null,
+      "classification": "снижение числа параметров"
+    },
+    {
+      "metric": "seconds",
+      "A": 24.560798059997616,
+      "s": 1.240922932474063,
+      "B": 24.746958719997203,
+      "delta": 0.18616065999958664,
+      "ratio": 0.15001790613090926,
+      "criterion_2s": false,
+      "threshold": 4.912159611999524,
+      "outside_tolerance": false,
+      "classification": "нейтрально"
+    }
+  ],
+  "diagnostics": [
+    {
+      "d": 1,
+      "seeds": [
+        101,
+        102,
+        103
+      ],
+      "values": [
+        20.56284523010254,
+        20.75014305114746,
+        20.553089141845703
+      ],
+      "mean": 20.622025807698567,
+      "s": 0.11105996743303154
+    },
+    {
+      "d": 2,
+      "seeds": [
+        101,
+        102,
+        103
+      ],
+      "values": [
+        23.30545425415039,
+        23.423460006713867,
+        22.6579647064209
+      ],
+      "mean": 23.12895965576172,
+      "s": 0.4121389585296924
+    },
+    {
+      "d": 3,
+      "seeds": [
+        101,
+        102,
+        103
+      ],
+      "values": [
+        24.76555824279785,
+        24.63511848449707,
+        26.187286376953125
+      ],
+      "mean": 25.195987701416016,
+      "s": 0.8609636639995976
+    },
+    {
+      "d": 4,
+      "seeds": [
+        101,
+        102,
+        103
+      ],
+      "values": [
+        26.925626754760742,
+        26.3360595703125,
+        26.156200408935547
+      ],
+      "mean": 26.472628911336262,
+      "s": 0.402483060628925
+    },
+    {
+      "d": 8,
+      "seeds": [
+        101,
+        102,
+        103
+      ],
+      "values": [
+        25.849468231201172,
+        26.226293563842773,
+        24.766117095947266
+      ],
+      "mean": 25.613959630330402,
+      "s": 0.7580415919737058
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "student": "Скрыпник Михаил Дмитриевич",
+  "group": "МИК11",
+  "variant": 1,
+  "task": "Построение автокодировщика: диск, d 8 -> 2",
+  "preregistration": {
+    "recorded_at": "2026-10-27T16:39:08+03:00",
+    "variant": 1,
+    "kind": "disc",
+    "factor": "latent_8_to_2",
+    "hypothesis": "Сжатие латентного вектора с 8 до 2 чисел снизит PSNR на тесте более чем на 1 дБ. Изменение разрыва train-test останется в пределах 0,1 дБ; изменение времени - в пределах 20%. Основная предполагаемая причина потери качества - недостаточное узкое место для трёх факторов сцены.",
+    "A": {
+      "arch": "conv",
+      "d": 8,
+      "loss": "mse",
+      "noise": 0.0,
+      "eval_noise": 0.0,
+      "n_train": 4096,
+      "epochs": 20
+    },
+    "B": {
+      "arch": "conv",
+      "d": 2,
+      "loss": "mse",
+      "noise": 0.0,
+      "eval_noise": 0.0,
+      "n_train": 4096,
+      "epochs": 20
+    },
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "data_seed": 7,
+    "tolerances": {
+      "psnr": 1.0,
+      "gap": 0.1,
+      "seconds_relative": 0.2
+    },
+    "tolerance_rationale": {
+      "psnr": "Изменение MSE примерно в 1,26 раза считаем практически заметным.",
+      "gap": "Сдвиг разрыва менее 0,1 дБ считаем малым.",
+      "seconds": "Меньше 20% времени не считаем существенным."
+    },
+    "diagnostic_d": [
+      1,
+      2,
+      3,
+      4,
+      8
+    ],
+    "diagnostic_seeds": [
+      101,
+      102,
+      103
+    ],
+    "params_rule": "Точное изменение ёмкости; практический допуск не задаётся.",
+    "environment_adaptation": "Локальный Windows, CPU float32, 4 потока; Colab T4 не используется. Данные, архитектура, шаг Adam, batch и 20 эпох сохранены."
+  },
+  "environment": {
+    "recorded_at": "2026-10-27T16:39:08+03:00",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.17 (main, Oct  3 2026, 01:03:09) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\DONSTU\\ai-in-creative-industries\\LR05\\.venv\\Scripts\\python.exe",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "deterministic_algorithms": true,
+    "packages": {
+      "torch": "2.11.0+cpu",
+      "numpy": "2.4.6",
+      "Pillow": "12.3.0",
+      "nbformat": "5.11.1",
+      "nbclient": "0.11.0"
+    },
+    "library_sha256": "3455ac72c7d5a0a119784faefd6c248f8c81975f99beba1dd26dca1052a89a03"
+  },
+  "dataset": {
+    "train": 4096,
+    "test": 1024,
+    "shape": [
+      3,
+      32,
+      32
+    ],
+    "seed": 7,
+    "sha256": "122f2ccf788c451f345b9591e5e44372aa26608835c4ddafbbc81629742ba9f3"
+  },
+  "training": {
+    "optimizer": "Adam",
+    "lr": 0.002,
+    "batch": 128,
+    "epochs": 20,
+    "steps": 640
+  },
+  "baseline_psnr": 17.170730590820312,
+  "command": "python src/build_notebook.py",
+  "source": "Библиотека восстановлена из приложения А PDF: исправлены только переносы строк.",
+  "rights": "Синтетические сцены; внешних изображений и весов нет. Отдельная лицензия на библиотеку в методичке не указана.",
+  "limitations": [
+    "Windows CPU вместо Colab T4",
+    "Один фиксированный train/test split",
+    "Пять seed",
+    "Синтетические сцены",
+    "2s - эвристика, не формальный тест"
+  ]
+}

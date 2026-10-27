@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-10-27T16:39:08+03:00",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.17 (main, Oct  3 2026, 01:03:09) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\DONSTU\\ai-in-creative-industries\\LR05\\.venv\\Scripts\\python.exe",
+  "device": "cpu",
+  "dtype": "float32",
+  "threads": 4,
+  "deterministic_algorithms": true,
+  "packages": {
+    "torch": "2.11.0+cpu",
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0"
+  },
+  "library_sha256": "3455ac72c7d5a0a119784faefd6c248f8c81975f99beba1dd26dca1052a89a03"
+}
