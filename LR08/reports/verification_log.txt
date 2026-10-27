@@ -1,0 +1,17 @@
+PASS A seed=101: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS B seed=101: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS A seed=102: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS B seed=102: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS A seed=103: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS B seed=103: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS A seed=104: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS B seed=104: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS A seed=105: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS B seed=105: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS AE seed=101: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS NO_WARMUP seed=101: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS NO_WARMUP seed=102: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS NO_WARMUP seed=103: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS NO_WARMUP seed=104: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS NO_WARMUP seed=105: 4 metrics and 8-axis diagnostics recomputed from checkpoint
+PASS: data hash, preregistration timing, one changed factor, five seeds, summary, baseline, 16 checkpoints

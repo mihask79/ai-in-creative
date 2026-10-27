@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-27T17:03:14+03:00",
+  "variant": 1,
+  "kind": "disc",
+  "factor": "beta_1_to_8",
+  "A": {
+    "d": 8,
+    "beta": 1.0,
+    "interp": "lin",
+    "temp": 1.0,
+    "epochs": 30
+  },
+  "B": {
+    "d": 8,
+    "beta": 8.0,
+    "interp": "lin",
+    "temp": 1.0,
+    "epochs": 30
+  },
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "data_seed": 7,
+  "pair_seed": 11,
+  "sample_seed": "1000 + training_seed",
+  "hypothesis": "Увеличение beta с 1 до 8 ухудшит реконструкцию более чем на 1 дБ и уменьшит число активных осей. Предполагается улучшение интерполяции и качества сэмплов более чем на 1 дБ; изменение R2 предполагается в пределах 0,05. Эти предположения могут не подтвердиться.",
+  "tolerances": {
+    "recon": 1.0,
+    "interp": 1.0,
+    "sample": 1.0,
+    "r2": 0.05
+  },
+  "tolerance_rationale": "1 дБ соответствует изменению MSE примерно в 1,26 раза; 0,05 R2 - пять процентных пунктов объяснённой дисперсии. Учебные пороги практической величины, не критерий проверки гипотез.",
+  "active_axis_rule": "mean_test KL_j > 0.05 nat; mu.std uses ddof=1",
+  "diagnostics": "AE beta=0 seed101; no warmup beta=1 seeds101..105; warmup main A reused",
+  "environment_adaptation": "Windows CPU float32, 4 threads; Engee/Julia not used; algorithms and training budget preserved"
+}

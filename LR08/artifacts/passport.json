@@ -1,0 +1,88 @@
+{
+  "author": "Скрыпник Михаил Дмитриевич",
+  "group": "МИК11",
+  "course": "Искусственный интеллект в креативных технологиях",
+  "laboratory": 8,
+  "variant": 1,
+  "preregistration": {
+    "recorded_at": "2026-10-27T17:03:14+03:00",
+    "variant": 1,
+    "kind": "disc",
+    "factor": "beta_1_to_8",
+    "A": {
+      "d": 8,
+      "beta": 1.0,
+      "interp": "lin",
+      "temp": 1.0,
+      "epochs": 30
+    },
+    "B": {
+      "d": 8,
+      "beta": 8.0,
+      "interp": "lin",
+      "temp": 1.0,
+      "epochs": 30
+    },
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "data_seed": 7,
+    "pair_seed": 11,
+    "sample_seed": "1000 + training_seed",
+    "hypothesis": "Увеличение beta с 1 до 8 ухудшит реконструкцию более чем на 1 дБ и уменьшит число активных осей. Предполагается улучшение интерполяции и качества сэмплов более чем на 1 дБ; изменение R2 предполагается в пределах 0,05. Эти предположения могут не подтвердиться.",
+    "tolerances": {
+      "recon": 1.0,
+      "interp": 1.0,
+      "sample": 1.0,
+      "r2": 0.05
+    },
+    "tolerance_rationale": "1 дБ соответствует изменению MSE примерно в 1,26 раза; 0,05 R2 - пять процентных пунктов объяснённой дисперсии. Учебные пороги практической величины, не критерий проверки гипотез.",
+    "active_axis_rule": "mean_test KL_j > 0.05 nat; mu.std uses ddof=1",
+    "diagnostics": "AE beta=0 seed101; no warmup beta=1 seeds101..105; warmup main A reused",
+    "environment_adaptation": "Windows CPU float32, 4 threads; Engee/Julia not used; algorithms and training budget preserved"
+  },
+  "environment": {
+    "recorded_at": "2026-10-27T17:03:15+03:00",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.17 (main, Oct  3 2026, 01:03:09) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\DONSTU\\ai-in-creative-industries\\LR05\\.venv\\Scripts\\python.exe",
+    "device": "cpu",
+    "threads": 4,
+    "dtype": "float32",
+    "deterministic_algorithms": true,
+    "packages": {
+      "torch": "2.11.0+cpu",
+      "numpy": "2.4.6",
+      "Pillow": "12.3.0",
+      "nbformat": "5.11.1",
+      "nbclient": "0.11.0"
+    },
+    "libraries": {
+      "lab07_lib.py": "3455ac72c7d5a0a119784faefd6c248f8c81975f99beba1dd26dca1052a89a03",
+      "lab08_lib.py": "dd7c4983f21c5d11edcd4eb740eb5de4130b299d67507f07d03ecb4751060043"
+    }
+  },
+  "dataset": {
+    "n_train": 4096,
+    "n_test": 1024,
+    "shape": [
+      3,
+      32,
+      32
+    ],
+    "data_seed": 7,
+    "sha256": "3ed99030474dfafbb6546fdd1c4e4492d1766982243357e2e11e89fd9c15151c"
+  },
+  "baseline_psnr": 17.170730590820312,
+  "training": "ConvVAE 8; Adam lr=0.002; batch=128; 30 epochs = 960 steps; warmup=10",
+  "metrics": "1024 reconstruction scenes; 200 pairs x 3 points; 256 nearest-test sample PSNR; linear factor R2",
+  "provenance": "Synthetic data; source teaching PDF in assignment; libraries extracted/copied locally",
+  "license": "No separate code license stated in the PDF; prepared for educational submission",
+  "individual_contribution": "Experiment setup, execution, analysis and report automated with AI assistance; oral defense not performed",
+  "execution_command": "python src/build_notebook.py",
+  "completed_at": "2026-10-27T17:14:03+03:00"
+}
