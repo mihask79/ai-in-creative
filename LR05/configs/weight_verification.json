@@ -1,0 +1,10 @@
+{
+  "model_id": "stabilityai/sd-turbo",
+  "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+  "file": "unet/diffusion_pytorch_model.fp16.safetensors",
+  "size_bytes": 1731904736,
+  "sha256": "40ec400881e27d1376c7c95c5bd495f407b33756e80eb6365e301c33a07af6e5",
+  "expected_sha256_source": "https://huggingface.co/stabilityai/sd-turbo/raw/b261bac6fd2cf515557d5d0707481eafa0485ec2/unet/diffusion_pytorch_model.fp16.safetensors",
+  "verification": "Полная SHA-256 собранного файла совпала с oid sha256 указателя Git LFS закреплённой ревизии",
+  "download_method": "HTTP Range, части по 8 MiB; проверка диапазона и размера каждой части"
+}

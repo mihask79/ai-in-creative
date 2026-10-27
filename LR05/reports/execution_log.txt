@@ -1,0 +1,373 @@
+CELL 1
+from pathlib import Path
+import sys
+ROOT = Path.cwd()
+if not (ROOT / 'src').exists():
+    raise RuntimeError('Откройте блокнот из папки LR05')
+sys.path.insert(0, str(ROOT / 'src'))
+from lab05_experiment import main
+results = main()
+
+C:\DONSTU\ai-in-creative-industries\LR05\.venv\Lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+
+
+W1027 10:20:43.049000 14748 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+
+
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+
+
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+
+
+[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+
+
+Гипотеза и допуск записаны до загрузки модели: 2026-10-27T10:20:45.208040+03:00
+
+
+Два последовательных вызова со свежим CPU-генератором и seed 1001 совпадут побитово.
+
+
+{
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.17",
+  "execution_device": "cpu",
+  "cpu": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+  "logical_cpus": 8,
+  "torch_num_threads": 1,
+  "cuda_available": false,
+  "deterministic_algorithms": true,
+  "packages": {
+    "torch": "2.11.0+cpu",
+    "diffusers": "0.40.0",
+    "transformers": "5.21.0",
+    "Pillow": "12.3.0",
+    "numpy": "2.4.6",
+    "accelerate": "1.15.0",
+    "safetensors": "0.8.0"
+  }
+}
+
+
+C:\DONSTU\ai-in-creative-industries\LR05\.venv\Lib\site-packages\huggingface_hub\utils\_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+C:\DONSTU\ai-in-creative-industries\LR05\.venv\Lib\site-packages\diffusers\utils\deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Couldn't connect to the Hub: Cannot reach https://huggingface.co/api/models/stabilityai/sd-turbo/revision/b261bac6fd2cf515557d5d0707481eafa0485ec2: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable..
+Will try to load from local cache.
+
+
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+
+Loading pipeline components...:  20%|██        | 1/5 [00:07<00:30,  7.52s/it]
+
+Loading pipeline components...:  60%|██████    | 3/5 [00:08<00:04,  2.23s/it]
+
+Loading pipeline components...:  80%|████████  | 4/5 [00:08<00:01,  1.49s/it]
+
+
+
+
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s]
+
+[A
+
+
+
+
+Loading weights:   7%|▋         | 26/372 [00:00<00:01, 208.77it/s]
+
+[A
+
+
+
+
+Loading weights:  13%|█▎        | 47/372 [00:00<00:01, 182.29it/s]
+
+[A
+
+
+
+
+Loading weights:  18%|█▊        | 66/372 [00:00<00:02, 130.22it/s]
+
+[A
+
+
+
+
+Loading weights:  23%|██▎       | 84/372 [00:00<00:02, 135.94it/s]
+
+[A
+
+
+
+
+Loading weights:  27%|██▋       | 99/372 [00:00<00:02, 129.24it/s]
+
+[A
+
+
+
+
+Loading weights:  32%|███▏      | 120/372 [00:00<00:01, 144.61it/s]
+
+[A
+
+
+
+
+Loading weights:  36%|███▋      | 135/372 [00:00<00:01, 124.15it/s]
+
+[A
+
+
+
+
+Loading weights:  41%|████      | 152/372 [00:01<00:01, 135.10it/s]
+
+[A
+
+
+
+
+Loading weights:  45%|████▍     | 167/372 [00:01<00:01, 120.65it/s]
+
+[A
+
+
+
+
+Loading weights:  48%|████▊     | 180/372 [00:01<00:02, 86.47it/s] 
+
+[A
+
+
+
+
+Loading weights:  51%|█████▏    | 191/372 [00:01<00:02, 84.07it/s]
+
+[A
+
+
+
+
+Loading weights:  54%|█████▍    | 201/372 [00:01<00:02, 64.38it/s]
+
+[A
+
+
+
+
+Loading weights:  56%|█████▌    | 209/372 [00:02<00:02, 62.35it/s]
+
+[A
+
+
+
+
+Loading weights:  58%|█████▊    | 217/372 [00:02<00:02, 64.89it/s]
+
+[A
+
+
+
+
+Loading weights:  60%|██████    | 225/372 [00:02<00:03, 38.19it/s]
+
+[A
+
+
+
+
+Loading weights:  62%|██████▏   | 231/372 [00:03<00:04, 31.46it/s]
+
+[A
+
+
+
+
+Loading weights:  63%|██████▎   | 236/372 [00:03<00:04, 33.61it/s]
+
+[A
+
+
+
+
+Loading weights:  65%|██████▍   | 241/372 [00:03<00:04, 29.62it/s]
+
+[A
+
+
+
+
+Loading weights:  66%|██████▌   | 245/372 [00:03<00:05, 23.02it/s]
+
+[A
+
+
+
+
+Loading weights:  67%|██████▋   | 249/372 [00:03<00:06, 20.32it/s]
+
+[A
+
+
+
+
+Loading weights:  85%|████████▍ | 316/372 [00:04<00:00, 107.54it/s]
+
+[A
+
+
+
+
+Loading weights:  90%|████████▉ | 334/372 [00:04<00:00, 117.50it/s]
+
+[A
+
+
+
+
+Loading weights:  95%|█████████▍| 352/372 [00:04<00:00, 111.50it/s]
+
+[A
+
+Loading weights: 100%|██████████| 372/372 [00:04<00:00, 84.77it/s] 
+
+
+
+
+Loading pipeline components...: 100%|██████████| 5/5 [00:13<00:00,  2.81s/it]
+
+Loading pipeline components...: 100%|██████████| 5/5 [00:13<00:00,  2.77s/it]
+
+
+You have disabled the safety checker for <class 'diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion.StableDiffusionPipeline'> by passing `safety_checker=None`. Ensure that you abide to the conditions of the Stable Diffusion license and do not expose unfiltered results in services or applications open to the public. Both the diffusers team and Hugging Face strongly recommend to keep the safety filter enabled in all public facing circumstances, disabling it only for use-cases that involve analyzing network behavior or auditing its results. For more information, please have a look at https://github.com/huggingface/diffusers/pull/254 .
+
+
+Модель загружена за 14.07 с. Прогрев...
+
+
+Прогрев: 100.08 с
+
+
+run_A: 110.93 с; SHA-256 73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325
+
+
+run_B: 173.41 с; SHA-256 73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325
+
+
+error_A: 147.56 с; SHA-256 73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325
+
+
+error_B: 157.06 с; SHA-256 5210d554b6bbda59c94f7f3e0bbdb04ea08460fd6f555334da4e34f71c891e61
+
+
+fixed: 173.80 с; SHA-256 73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325
+
+
+{
+  "repeat": {
+    "sha_a": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325",
+    "sha_b": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325",
+    "sha_equal": true,
+    "pixel_equal": true,
+    "max_diff": 0,
+    "mse": 0.0,
+    "psnr_db": "Infinity",
+    "tolerance_db": 40.0,
+    "verdict": "identical"
+  },
+  "shared_generator": {
+    "sha_a": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325",
+    "sha_b": "5210d554b6bbda59c94f7f3e0bbdb04ea08460fd6f555334da4e34f71c891e61",
+    "sha_equal": false,
+    "pixel_equal": false,
+    "max_diff": 247,
+    "mse": 5345.149594624837,
+    "psnr_db": 10.851204965596056,
+    "tolerance_db": 40.0,
+    "verdict": "different"
+  },
+  "first_shared_vs_reference": {
+    "sha_a": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325",
+    "sha_b": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325",
+    "sha_equal": true,
+    "pixel_equal": true,
+    "max_diff": 0,
+    "mse": 0.0,
+    "psnr_db": "Infinity",
+    "tolerance_db": 40.0,
+    "verdict": "identical"
+  },
+  "repaired_vs_reference": {
+    "sha_a": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325",
+    "sha_b": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325",
+    "sha_equal": true,
+    "pixel_equal": true,
+    "max_diff": 0,
+    "mse": 0.0,
+    "psnr_db": "Infinity",
+    "tolerance_db": 40.0,
+    "verdict": "identical"
+  }
+}
+
+
+CELL 2
+from IPython.display import display
+from PIL import Image
+for name in ['run_A', 'run_B', 'error_A', 'error_B', 'fixed']:
+    print(name, results['manifests'][name]['sha256'])
+    display(Image.open(ROOT / 'artifacts' / name / 'result.png'))
+
+run_A 73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325
+
+
+<PIL.PngImagePlugin.PngImageFile image mode=RGB size=512x512>
+
+run_B 73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325
+
+
+<PIL.PngImagePlugin.PngImageFile image mode=RGB size=512x512>
+
+error_A 73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325
+
+
+<PIL.PngImagePlugin.PngImageFile image mode=RGB size=512x512>
+
+error_B 5210d554b6bbda59c94f7f3e0bbdb04ea08460fd6f555334da4e34f71c891e61
+
+
+<PIL.PngImagePlugin.PngImageFile image mode=RGB size=512x512>
+
+fixed 73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325
+
+
+<PIL.PngImagePlugin.PngImageFile image mode=RGB size=512x512>
+
+CELL 3
+import json, hashlib
+import lab05_lib as L
+for name in ['run_A', 'run_B', 'error_A', 'error_B', 'fixed']:
+    folder = ROOT / 'artifacts' / name
+    m = json.loads((folder / 'manifest.json').read_text(encoding='utf-8'))
+    assert hashlib.sha256((folder / 'result.png').read_bytes()).hexdigest() == m['sha256']
+    with Image.open(folder / 'result.png') as im:
+        assert im.size == (512, 512) and im.mode == 'RGB'
+for key, names in {'repeat':('run_A','run_B'), 'shared_generator':('error_A','error_B'),
+                   'repaired_vs_reference':('run_A','fixed')}.items():
+    a, b = [Image.open(ROOT / 'artifacts' / n / 'result.png') for n in names]
+    assert L.compare(a,b) == results[key]
+    print(key, json.dumps(results[key], ensure_ascii=False))
+print('PASS: SHA-256, размеры и метрики пересчитаны по сохранённым PNG')
+
+repeat {"sha_a": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325", "sha_b": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325", "sha_equal": true, "pixel_equal": true, "max_diff": 0, "mse": 0.0, "psnr_db": "Infinity", "tolerance_db": 40.0, "verdict": "identical"}
+shared_generator {"sha_a": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325", "sha_b": "5210d554b6bbda59c94f7f3e0bbdb04ea08460fd6f555334da4e34f71c891e61", "sha_equal": false, "pixel_equal": false, "max_diff": 247, "mse": 5345.149594624837, "psnr_db": 10.851204965596056, "tolerance_db": 40.0, "verdict": "different"}
+
+
+repaired_vs_reference {"sha_a": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325", "sha_b": "73a67a9cb0d4280b498aa281783d4801903fc683aee92900e83b39252ad8a325", "sha_equal": true, "pixel_equal": true, "max_diff": 0, "mse": 0.0, "psnr_db": "Infinity", "tolerance_db": 40.0, "verdict": "identical"}
+PASS: SHA-256, размеры и метрики пересчитаны по сохранённым PNG

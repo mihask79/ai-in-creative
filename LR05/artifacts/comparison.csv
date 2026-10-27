@@ -1,0 +1,5 @@
+﻿comparison;sha_equal;pixel_equal;max_diff;mse;psnr_db;verdict
+repeat;True;True;0;0.0;Infinity;identical
+shared_generator;False;False;247;5345.149594624837;10.851204965596056;different
+first_shared_vs_reference;True;True;0;0.0;Infinity;identical
+repaired_vs_reference;True;True;0;0.0;Infinity;identical
