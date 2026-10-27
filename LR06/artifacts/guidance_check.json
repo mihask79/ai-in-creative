@@ -1,0 +1,24 @@
+{
+  "1.0": {
+    "guidance": 1.0,
+    "cfg_active": false,
+    "seconds": 75.25866640001186,
+    "sha256": "5a97bb00a00adaf1920e051d99e46a2bb366c811466814d96d17c5448109a7eb",
+    "same_sha256": true,
+    "pixel_equal": true,
+    "mse": 0.0,
+    "psnr_db": "Infinity",
+    "path": "artifacts/guidance_1.png"
+  },
+  "3.0": {
+    "guidance": 3.0,
+    "cfg_active": true,
+    "seconds": 95.97257339998032,
+    "sha256": "5c408a41b1f274e02a654d46be0d9a84efc9288304324489367ae452232aa26b",
+    "same_sha256": false,
+    "pixel_equal": false,
+    "mse": 3828.4329935709634,
+    "psnr_db": 12.300593105289925,
+    "path": "artifacts/guidance_3.png"
+  }
+}

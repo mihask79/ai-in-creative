@@ -1,0 +1,16 @@
+Verified config.json 4186
+Verified preprocessor_config.json 316
+Verified tokenizer_config.json 592
+Verified special_tokens_map.json 389
+Verified vocab.json 862328
+Verified merges.txt 524657
+CLIP 10/73 chunks
+CLIP 20/73 chunks
+CLIP 30/73 chunks
+CLIP 40/73 chunks
+CLIP 50/73 chunks
+CLIP 60/73 chunks
+CLIP 70/73 chunks
+Verified pytorch_model.bin 605247071
+Verified README.md 7942
+CLIP download complete

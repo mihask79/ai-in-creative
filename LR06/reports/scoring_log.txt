@@ -1,0 +1,23 @@
+W1027 16:14:00.377000 12888 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+Загрузка закреплённой CLIP ViT-B/32...
+
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 398/398 [00:00<00:00, 15111.60it/s]
+[transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+A seed=101: CLIP=27.359286
+B seed=101: CLIP=30.349702
+A seed=102: CLIP=29.267797
+B seed=102: CLIP=29.609576
+A seed=103: CLIP=32.288805
+B seed=103: CLIP=29.709542
+A seed=104: CLIP=32.362339
+B seed=104: CLIP=27.274159
+A seed=105: CLIP=28.135434
+B seed=105: CLIP=27.148652
+{"metric": "clip", "A": 29.882732033729553, "s": 2.3311269901538347, "B": 28.818325996398926, "delta": -1.0644060373306274, "ratio": 0.4566057712970779, "criterion_2s": false, "percent": -3.5619435201881804, "threshold": 1.0, "classification": "ухудшение", "outside_tolerance": true}
+{"metric": "edge", "A": 0.045931347302030655, "s": 0.005559844924660244, "B": 0.09405508738927768, "delta": 0.04812374008724702, "ratio": 8.655590351773672, "criterion_2s": true, "percent": 104.7731950269167, "threshold": 0.004593134730203066, "classification": "улучшение", "outside_tolerance": true}
+{"metric": "contrast", "A": 0.18472021907218666, "s": 0.015999381673433788, "B": 0.2668972054200909, "delta": 0.08217698634790421, "ratio": 5.13626013962497, "criterion_2s": true, "percent": 44.48727202721124, "threshold": 0.018472021907218666, "classification": "улучшение", "outside_tolerance": true}
+{"metric": "seconds", "A": 78.01688655999024, "s": 4.892536600641079, "B": 109.51831555999816, "delta": 31.501429000007917, "ratio": 6.438670074717524, "criterion_2s": true, "percent": 40.377705890359046, "threshold": 15.603377311998049, "classification": "ухудшение", "outside_tolerance": true}

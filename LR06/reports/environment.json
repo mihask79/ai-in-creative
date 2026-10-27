@@ -1,0 +1,21 @@
+{
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.17",
+  "cpu": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+  "device": "cpu",
+  "dtype": "float32",
+  "weight_variant": "fp16",
+  "threads": 4,
+  "cuda_available": false,
+  "deterministic_algorithms": true,
+  "attention": "PyTorch SDPA; slicing disabled",
+  "packages": {
+    "torch": "2.11.0+cpu",
+    "diffusers": "0.40.0",
+    "transformers": "5.21.0",
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0",
+    "accelerate": "1.15.0",
+    "safetensors": "0.8.0"
+  }
+}

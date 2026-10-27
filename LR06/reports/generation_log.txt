@@ -1,0 +1,170 @@
+W1027 15:50:28.659000 25384 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+Гипотеза и допуски записаны ДО запуска: 2026-10-27T15:50:31.463867+03:00
+{
+  "recorded_at": "2026-10-27T15:50:31.463867+03:00",
+  "variant": 1,
+  "student": "Скрыпник Михаил Дмитриевич",
+  "group": "МИК11",
+  "factor": "num_inference_steps: 1 -> 4",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "prompt": "editorial poster concept for a robotics festival, glowing mechanical arm silhouette, deep blue and amber palette, clean composition, no text, no logo, no people",
+  "A": {
+    "steps": 1,
+    "guidance": 0.0,
+    "size": 512
+  },
+  "B": {
+    "steps": 4,
+    "guidance": 0.0,
+    "size": 512
+  },
+  "hypothesis": "Четыре шага повысят энергию границ и время; CLIP останется в пределах ±1,0. Контраст может возрасти.",
+  "tolerance": {
+    "clip": {
+      "kind": "absolute",
+      "value": 1.0
+    },
+    "edge": {
+      "kind": "relative",
+      "value": 0.1
+    },
+    "contrast": {
+      "kind": "relative",
+      "value": 0.1
+    },
+    "seconds": {
+      "kind": "relative",
+      "value": 0.2
+    }
+  },
+  "direction": "CLIP, edge, contrast: рост показателя; seconds: уменьшение. Рост edge и contrast не доказывает качество.",
+  "payoff_rule": "4 шага оправданы для черновиков, только если CLIP вырастет более чем на 1,0, время вырастет не более чем на 20%, а главный объект останется узнаваемым.",
+  "error_hypothesis": "При guidance 1.0 CFG не включится; PNG совпадёт с guidance 0.0.",
+  "model": "stabilityai/sd-turbo",
+  "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+  "clip_model": "openai/clip-vit-base-patch32",
+  "clip_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "environment_deviation": "Локальный CPU float32 вместо Colab T4 float16; оба режима на одинаковой среде."
+}
+C:\DONSTU\ai-in-creative-industries\LR05\.venv\Lib\site-packages\diffusers\utils\deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading pipeline components...:  20%|██        | 1/5 [00:07<00:30,  7.72s/it]
+Loading pipeline components...:  40%|████      | 2/5 [00:07<00:09,  3.29s/it]
+Loading pipeline components...:  60%|██████    | 3/5 [00:08<00:03,  1.86s/it]
+Loading pipeline components...:  80%|████████  | 4/5 [00:08<00:01,  1.40s/it]
+
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+
+Loading weights:   6%|▌         | 22/372 [00:00<00:01, 192.09it/s][A
+
+Loading weights:  11%|█▏        | 42/372 [00:00<00:02, 158.90it/s][A
+
+Loading weights:  16%|█▌        | 59/372 [00:00<00:02, 125.15it/s][A
+
+Loading weights:  20%|█▉        | 73/372 [00:00<00:02, 101.34it/s][A
+
+Loading weights:  23%|██▎       | 85/372 [00:00<00:02, 105.80it/s][A
+
+Loading weights:  26%|██▋       | 98/372 [00:00<00:02, 108.02it/s][A
+
+Loading weights:  30%|██▉       | 110/372 [00:00<00:02, 108.69it/s][A
+
+Loading weights:  33%|███▎      | 122/372 [00:01<00:03, 75.28it/s] [A
+
+Loading weights:  35%|███▌      | 131/372 [00:01<00:03, 71.00it/s][A
+
+Loading weights:  39%|███▊      | 144/372 [00:01<00:02, 83.31it/s][A
+
+Loading weights:  41%|████▏     | 154/372 [00:01<00:03, 69.56it/s][A
+
+Loading weights:  44%|████▍     | 163/372 [00:01<00:03, 67.87it/s][A
+
+Loading weights:  46%|████▌     | 171/372 [00:02<00:03, 60.67it/s][A
+
+Loading weights:  48%|████▊     | 178/372 [00:02<00:03, 60.03it/s][A
+
+Loading weights:  50%|████▉     | 185/372 [00:02<00:04, 39.78it/s][A
+
+Loading weights:  53%|█████▎    | 196/372 [00:02<00:03, 45.79it/s][A
+
+Loading weights:  55%|█████▍    | 203/372 [00:02<00:03, 48.45it/s][A
+
+Loading weights:  57%|█████▋    | 211/372 [00:03<00:03, 46.48it/s][A
+
+Loading weights:  58%|█████▊    | 217/372 [00:03<00:04, 32.67it/s][A
+
+Loading weights:  60%|█████▉    | 222/372 [00:03<00:04, 35.29it/s][A
+
+Loading weights:  61%|██████    | 227/372 [00:03<00:04, 30.04it/s][A
+
+Loading weights:  63%|██████▎   | 236/372 [00:03<00:03, 39.40it/s][A
+
+Loading weights:  66%|██████▌   | 245/372 [00:03<00:02, 46.71it/s][A
+
+Loading weights:  68%|██████▊   | 252/372 [00:04<00:02, 48.40it/s][A
+
+Loading weights:  70%|███████   | 262/372 [00:04<00:01, 55.30it/s][A
+
+Loading weights:  72%|███████▏  | 269/372 [00:04<00:01, 55.30it/s][A
+
+Loading weights:  74%|███████▍  | 277/372 [00:04<00:01, 53.44it/s][A
+
+Loading weights:  76%|███████▌  | 283/372 [00:04<00:02, 44.08it/s][A
+
+Loading weights:  79%|███████▉  | 293/372 [00:04<00:01, 53.61it/s][A
+
+Loading weights:  80%|████████  | 299/372 [00:04<00:01, 50.23it/s][A
+
+Loading weights:  82%|████████▏ | 305/372 [00:05<00:01, 40.73it/s][A
+
+Loading weights:  84%|████████▍ | 312/372 [00:05<00:01, 40.67it/s][A
+
+Loading weights:  85%|████████▌ | 317/372 [00:05<00:01, 38.13it/s][A
+
+Loading weights:  87%|████████▋ | 325/372 [00:05<00:01, 44.83it/s][A
+
+Loading weights:  89%|████████▊ | 330/372 [00:05<00:01, 29.39it/s][A
+
+Loading weights:  90%|████████▉ | 334/372 [00:06<00:01, 29.08it/s][A
+
+Loading weights:  91%|█████████ | 338/372 [00:06<00:01, 29.94it/s][A
+
+Loading weights:  92%|█████████▏| 342/372 [00:06<00:00, 30.31it/s][A
+
+Loading weights:  94%|█████████▍| 351/372 [00:06<00:00, 41.75it/s][A
+
+Loading weights:  96%|█████████▌| 356/372 [00:09<00:00, 43.25it/s][A
+
+Loading weights:  97%|█████████▋| 361/372 [00:10<00:02,  4.84it/s][A
+Loading weights: 100%|██████████| 372/372 [00:10<00:00, 36.60it/s]
+
+Loading pipeline components...: 100%|██████████| 5/5 [00:21<00:00,  5.32s/it]
+Loading pipeline components...: 100%|██████████| 5/5 [00:21<00:00,  4.21s/it]
+You have disabled the safety checker for <class 'diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion.StableDiffusionPipeline'> by passing `safety_checker=None`. Ensure that you abide to the conditions of the Stable Diffusion license and do not expose unfiltered results in services or applications open to the public. Both the diffusers team and Hugging Face strongly recommend to keep the safety filter enabled in all public facing circumstances, disabling it only for use-cases that involve analyzing network behavior or auditing its results. For more information, please have a look at https://github.com/huggingface/diffusers/pull/254 .
+Модель загружена: 21.22 с; CPU, 4 потока, float32
+Прогрев 1: 92.88 с
+Прогрев 4: 94.33 с
+A seed=101 steps=1 time=71.39s edge=0.041666 contrast=0.178326
+B seed=101 steps=4 time=127.43s edge=0.090361 contrast=0.257167
+A seed=102 steps=1 time=78.05s edge=0.041414 contrast=0.179453
+B seed=102 steps=4 time=97.51s edge=0.081238 contrast=0.262184
+A seed=103 steps=1 time=80.57s edge=0.054876 contrast=0.176351
+B seed=103 steps=4 time=108.73s edge=0.121403 contrast=0.276400
+A seed=104 steps=1 time=75.73s edge=0.047434 contrast=0.176234
+B seed=104 steps=4 time=107.47s edge=0.100767 contrast=0.256147
+A seed=105 steps=1 time=84.35s edge=0.044267 contrast=0.213237
+B seed=105 steps=4 time=106.45s edge=0.076507 contrast=0.282588
+Проверка guidance: {"guidance": 1.0, "cfg_active": false, "seconds": 75.25866640001186, "sha256": "5a97bb00a00adaf1920e051d99e46a2bb366c811466814d96d17c5448109a7eb", "same_sha256": true, "pixel_equal": true, "mse": 0.0, "psnr_db": "Infinity", "path": "artifacts/guidance_1.png"}
+Проверка guidance: {"guidance": 3.0, "cfg_active": true, "seconds": 95.97257339998032, "sha256": "5c408a41b1f274e02a654d46be0d9a84efc9288304324489367ae452232aa26b", "same_sha256": false, "pixel_equal": false, "mse": 3828.4329935709634, "psnr_db": 12.300593105289925, "path": "artifacts/guidance_3.png"}
+Серия изображений и проверка guidance завершены.

@@ -1,0 +1,83 @@
+{
+  "student": "Скрыпник Михаил Дмитриевич",
+  "group": "МИК11",
+  "variant": 1,
+  "date": "2026-10-27",
+  "actual_environment": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.17",
+    "cpu": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+    "device": "cpu",
+    "dtype": "float32",
+    "weight_variant": "fp16",
+    "threads": 4,
+    "cuda_available": false,
+    "deterministic_algorithms": true,
+    "attention": "PyTorch SDPA; slicing disabled",
+    "packages": {
+      "torch": "2.11.0+cpu",
+      "diffusers": "0.40.0",
+      "transformers": "5.21.0",
+      "numpy": "2.4.6",
+      "Pillow": "12.3.0",
+      "accelerate": "1.15.0",
+      "safetensors": "0.8.0"
+    }
+  },
+  "parameters": {
+    "recorded_at": "2026-10-27T15:50:31.463867+03:00",
+    "variant": 1,
+    "student": "Скрыпник Михаил Дмитриевич",
+    "group": "МИК11",
+    "factor": "num_inference_steps: 1 -> 4",
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "prompt": "editorial poster concept for a robotics festival, glowing mechanical arm silhouette, deep blue and amber palette, clean composition, no text, no logo, no people",
+    "A": {
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "B": {
+      "steps": 4,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "hypothesis": "Четыре шага повысят энергию границ и время; CLIP останется в пределах ±1,0. Контраст может возрасти.",
+    "tolerance": {
+      "clip": {
+        "kind": "absolute",
+        "value": 1.0
+      },
+      "edge": {
+        "kind": "relative",
+        "value": 0.1
+      },
+      "contrast": {
+        "kind": "relative",
+        "value": 0.1
+      },
+      "seconds": {
+        "kind": "relative",
+        "value": 0.2
+      }
+    },
+    "direction": "CLIP, edge, contrast: рост показателя; seconds: уменьшение. Рост edge и contrast не доказывает качество.",
+    "payoff_rule": "4 шага оправданы для черновиков, только если CLIP вырастет более чем на 1,0, время вырастет не более чем на 20%, а главный объект останется узнаваемым.",
+    "error_hypothesis": "При guidance 1.0 CFG не включится; PNG совпадёт с guidance 0.0.",
+    "model": "stabilityai/sd-turbo",
+    "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+    "clip_model": "openai/clip-vit-base-patch32",
+    "clip_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "environment_deviation": "Локальный CPU float32 вместо Colab T4 float16; оба режима на одинаковой среде."
+  },
+  "source": "Приложение А ЛР06: адаптация CPU, NumPy Sobel; библиотека ЛР05 расширена параметрами.",
+  "validity": "Одна модель, один бриф, 5 seed, локальный CPU. Новый сеанс и GPU не проверены.",
+  "notebook": "LR06.ipynb",
+  "results": "artifacts/results.json"
+}
